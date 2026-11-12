@@ -1,0 +1,8 @@
+{
+  "name": "artwork-ledger-pages-tests",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "fake-indexeddb": "^6.2.8"
+  }
+}

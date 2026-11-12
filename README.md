@@ -2,9 +2,22 @@
 
 一个操作简单的图稿档案与合作记录工具。
 
-[打开工作台](https://artwork-ledger-nov12-2026.huiheny.chatgpt.site)
+[打开公开工作台](https://adrianluo2022-debug.github.io/artwork-ledger/)
 
-网站提供公开入口。登录后，每个账号只读取和管理自己的作品、约稿与授权记录；业务数据保存在云端数据库。公开的源代码不包含实际账本、上传图片或数据库备份。
+GitHub Pages 版免登录使用，作品和交易记录保存在当前浏览器的 IndexedDB 中，不上传到 GitHub。更换设备、浏览器或清除网站数据后不会自动恢复，请定期导出 JSON 备份。公开的源代码不包含实际账本、上传图片或数据库备份。
+
+[原云端版](https://artwork-ledger-nov12-2026.huiheny.chatgpt.site)继续保留，登录账号的云端记录与 GitHub Pages 版互相独立，可通过 JSON 导出、导入转移记录。
+
+## GitHub Pages 构建
+
+```sh
+npm ci
+npx vite build --config pages/vite.config.mjs
+```
+
+`pages/` 为免登录版源码，`docs/` 为发布产物。GitHub Pages 发布源使用 `main` 分支的 `/docs` 目录。应用资源使用相对路径，可在项目子目录内运行。
+
+浏览器存储测试：`npm --prefix pages ci`，然后运行 `node --test pages/tests/local-store.test.mjs`。
 
 ## 能做什么
 
@@ -16,7 +29,7 @@
 
 详细操作见 [使用说明](./使用说明.md)。
 
-## 本地开发
+## 原云端版本地开发
 
 需要 Node.js 22.13.0 或更新版本，以及 npm。
 
@@ -42,9 +55,9 @@ npm run build
 
 `tests/http-smoke.mjs` 是独立的本地 HTTP 验证脚本，仅连接固定的本机 5187 端口，并写入明确标注的测试记录；它不会自动运行，也不会访问正式站点。
 
-## 部署
+## 原云端版部署
 
-这是包含服务端 API 与 D1 数据库的应用，GitHub Pages 不能直接运行当前版本。GitHub 仓库用于保存和维护源码。
+`app/` 保留原服务端 API 与 D1 数据库版本，不能直接运行在 GitHub Pages。上方 `pages/` 是可在 GitHub Pages 运行的浏览器存储版。
 
 通过 Sites 创建自己的新站点，将它返回的 `project_id` 写入 `.openai/hosting.json`，保留 `d1: "DB"` 与 `r2: null`，再按 Sites 的源码同步、构建和发布流程部署。发布会应用尚未执行的数据库迁移。本仓库不携带原站点的身份标识或部署凭据。
 
