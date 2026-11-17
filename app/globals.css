@@ -166,3 +166,55 @@ button.filter-chip{min-height:44px}
 .button.secondary,.term-buttons button,.filter-quick-actions button,.backup-option b,.upload-box b,.kind-switch button,.optional-fields summary small{color:#5d7550}
 .bottom-tab{color:#74846b}.bottom-tab.active{color:#4f6d3d}
 .empty-panel p,.empty-panel small,.backup-notice,.artwork-info p,.overview-caption{color:#75816d}
+
+/* Inline sale-date calendar, sized for a seven-column phone layout. */
+.sale-date-field{gap:9px}
+.sale-date-field>label{font-size:14px;font-weight:550;line-height:1.5;color:#718d57}
+.sale-date-trigger{display:flex;align-items:center;gap:9px;width:100%;min-height:48px;padding:11px 12px;border:1px solid #dbe5cc;border-radius:10px;background:#fffef9;color:#597840;text-align:left;font-size:16px;line-height:1.45}
+.sale-date-trigger>svg{width:19px;height:19px;flex-shrink:0;color:#8da777}
+.sale-date-trigger>span{flex:1;min-width:0;overflow-wrap:anywhere}
+.sale-date-trigger[aria-expanded=true]{border-color:#9db788;box-shadow:0 0 0 3px #9cbf7119}
+.sale-calendar{width:100%;min-width:0;padding:12px 9px 9px;border:1px solid #dce7ce;border-radius:15px;background:#fcfdf6;box-shadow:0 5px 18px #3f5a2d08}
+.sale-calendar-heading{display:grid;grid-template-columns:44px minmax(72px,1fr) minmax(68px,1fr) 44px;align-items:center;gap:5px;margin-bottom:11px}
+.sale-calendar-heading>button{display:grid;place-items:center;width:44px;min-height:44px;padding:9px;border:0;border-radius:11px;background:transparent;color:#74935a}
+.sale-calendar-heading>button:hover{background:#edf3e3}
+.sale-calendar-heading>button>svg{width:19px;height:19px}
+.sale-calendar-year{display:flex;align-items:center;justify-content:center;gap:4px;min-width:0;font-size:14px;color:#6c8756}
+.sale-calendar-heading input.sale-calendar-year,.sale-calendar-year input,.sale-calendar-heading select{display:block;width:100%;min-width:0;min-height:44px;max-width:100%;margin:0;padding:8px 6px;border:1px solid #e0e8d5;border-radius:9px;background:#fffef9;color:#526f40;font-size:16px;line-height:1.5;text-align:center;font-variant-numeric:tabular-nums}
+.sale-calendar-year input{flex:1;max-width:90px;appearance:textfield;-moz-appearance:textfield}
+.sale-calendar-year input::-webkit-inner-spin-button,.sale-calendar-year input::-webkit-outer-spin-button,.sale-calendar-heading input.sale-calendar-year::-webkit-inner-spin-button,.sale-calendar-heading input.sale-calendar-year::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.sale-calendar-heading select{padding-right:3px;text-align-last:center;cursor:pointer}
+.sale-calendar-weekdays,.sale-calendar-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));column-gap:1px;min-width:0}
+.sale-calendar-weekdays{margin-bottom:4px;color:#96a887;font-size:12px;text-align:center;line-height:28px}
+.sale-calendar-weekdays>*{min-width:0}
+.sale-calendar-days{row-gap:3px}
+.sale-calendar-day{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:100%;min-width:0;min-height:52px;padding:2px 0;border:0;border-radius:11px;background:transparent;color:#597641;font-size:16px;line-height:1;cursor:pointer;font-variant-numeric:tabular-nums}
+.sale-calendar-day>span{display:grid;place-items:center;width:30px;height:30px;flex-shrink:0;border:1px solid transparent;border-radius:50%;font-size:16px;line-height:1}
+.sale-calendar-day>small{display:block;max-width:100%;min-height:15px;padding:0 1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;line-height:15px;color:#9bad8b}
+.sale-calendar-day.other-month{color:#bdc8b2}.sale-calendar-day.other-month>small{color:#becab3}
+.sale-calendar-day:hover{background:#eef4e4}
+.sale-calendar-day.is-today>span{border-color:#9bb786;color:#668c48;font-weight:650}
+.sale-calendar-day.selected>span{background:#678a4d;border-color:#678a4d;color:#fff;font-weight:650}
+.sale-calendar-day.selected>small{color:#6e9052;font-weight:550}
+.sale-calendar-day:focus-visible{outline:2px solid #a3bd8c;outline-offset:0}
+.sale-calendar-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:10px;padding-top:10px;border-top:1px solid #e5ecd9}
+.sale-calendar-actions button{min-width:0;min-height:44px;padding:9px 4px;border:1px solid #dfe9d0;border-radius:9px;background:#fffef9;color:#7e9c62;font-size:14px;line-height:1.5}
+.sale-calendar-actions button:first-child{background:#edf4e1;border-color:#dce8ca;color:#678c48}.sale-calendar-actions button:hover{background:#e8f0dc}
+.sale-year-only{min-width:0;margin-top:3px;border-top:1px solid #e8eedf}
+.sale-year-only>summary{display:flex;align-items:center;gap:7px;min-height:44px;padding:9px 0;list-style:none;color:#8ba575;font-size:13px;line-height:1.5;cursor:pointer}
+.sale-year-only>summary::-webkit-details-marker{display:none}.sale-year-only>summary::before{content:'+';font-size:17px;line-height:1;width:14px;text-align:center;color:#a1b88a}.sale-year-only[open]>summary::before{content:'−'}
+.sale-year-only>div{display:flex;align-items:center;gap:9px;min-width:0;padding-bottom:5px}
+.sale-year-only input{min-width:0;flex:1;width:100%;font-size:16px;min-height:46px}
+.sale-year-only button{min-height:46px;min-width:92px;padding:10px 13px;border:1px solid #dce8cb;border-radius:10px;background:#eef4e3;color:#719451;font-size:14px;line-height:1.5;white-space:nowrap}
+.sale-year-only>small,.sale-year-only p{font-size:12px;line-height:1.7;color:#a0b48c;margin:7px 0 0}
+@media(max-width:359px){.sale-calendar{padding-left:5px;padding-right:5px}.sale-calendar-heading{grid-template-columns:40px minmax(64px,1fr) minmax(60px,1fr) 40px;gap:3px}.sale-calendar-heading>button{width:40px}.sale-calendar-day>span{width:28px;height:28px}.sale-calendar-day>small{font-size:10px}}
+
+.sale-calendar-day>small{color:#768568}.sale-date-field>label,.sale-year-only>summary{color:#52654b}
+
+/* The calendar owns its sheet so every week remains visible on small phones. */
+dialog.sale-calendar{position:fixed;inset:auto 0 0;max-width:420px;width:100%;max-height:92dvh;margin:0 auto;padding:8px 14px calc(12px + env(safe-area-inset-bottom,0px));border:1px solid #dce7ce;border-bottom:0;border-radius:20px 20px 0 0;overflow:auto;overscroll-behavior:contain;color:#344b37;box-shadow:0 -8px 35px #24391d25}
+dialog.sale-calendar::backdrop{background:#20321f55;backdrop-filter:blur(2px)}
+.sale-calendar-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;gap:10px}
+.sale-calendar-title h3{margin:0;font-size:18px;color:#344b37}
+.sale-calendar-title>button{min-width:44px;min-height:44px;border:0;border-radius:10px;background:transparent;color:#52654b;display:grid;place-items:center}
+.sale-calendar-heading{margin-bottom:8px}.sale-calendar-day{min-height:48px;gap:0}.sale-calendar-day>span{width:29px;height:29px}.sale-calendar-day>small{line-height:13px;min-height:13px}.sale-calendar-days{row-gap:1px}
